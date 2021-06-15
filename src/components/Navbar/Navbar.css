@@ -1,0 +1,30 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+  height: 30px;
+  z-index: 1;
+  margin-bottom: 5rem;
+}
+
+.navbar__logo {
+  position: fixed;
+  left: 20px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.navbar__list {
+  list-style: none;
+  display: flex;
+  margin-left: 5rem;
+}
+
+.navbar__list li {
+  color: #fff;
+  margin-left: 1rem;
+}
