@@ -5,14 +5,46 @@ import requests from "../requests";
 function Movies() {
   return (
     <>
-      <Row title="New on Netflix" fetchUrl={requests.fetchTrending} />
-      <Row title="Coming This Week" fetchUrl={requests.fetchNetflixOriginal} />
-      <Row title="Popular Movies" fetchUrl={requests.fetchLatest} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romantic Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <Row
+        type="movie"
+        title="New on Netflix"
+        fetchUrl={requests.fetchTrending}
+      />
+      <Row
+        type="movie"
+        title="Coming This Week"
+        fetchUrl={requests.fetchNetflixOriginal}
+      />
+      <Row
+        type="movie"
+        title="Popular Movies"
+        fetchUrl={requests.fetchLatest}
+      />
+      <Row
+        type="movie"
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        type="movie"
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+      />
+      <Row
+        type="movie"
+        title="Horror Movies"
+        fetchUrl={requests.fetchHorrorMovies}
+      />
+      <Row
+        type="movie"
+        title="Romantic Movies"
+        fetchUrl={requests.fetchRomanceMovies}
+      />
+      <Row
+        type="movie"
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+      />
     </>
   );
 }

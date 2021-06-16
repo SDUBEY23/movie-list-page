@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as ROUTES from "../../Navigation/routes";
 import "./Navbar.css";
 
 function Navbar() {
@@ -13,13 +14,17 @@ function Navbar() {
         />
         <ul className="navbar__list">
           <li>
-            <Link to="/">Home</Link>
+            <Link to={ROUTES.HOME}>Home</Link>
           </li>
           <li>
-            <Link to="/tvseries">TV Shows</Link>
+            <Link to={ROUTES.TV_SERIES} params={{ screenType: "tv" }}>
+              TV Shows
+            </Link>
           </li>
           <li>
-            <Link to="/movies">Movies</Link>
+            <Link to={ROUTES.MOVIES} params={{ screenType: "movie" }}>
+              Movies
+            </Link>
           </li>
           {/* <li>New & Popular</li>
            */}
