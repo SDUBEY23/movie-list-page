@@ -24,7 +24,11 @@
   margin-left: 5rem;
 }
 
-.navbar__list li {
+.navbar__list li a {
+  text-decoration: none;
   color: #fff;
+}
+
+.navbar__list li {
   margin-left: 1rem;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -11,11 +12,17 @@ function Navbar() {
           alt="Netflix logo"
         />
         <ul className="navbar__list">
-          <li>Home</li>
-          <li>TV Shows</li>
-          <li>Movies</li>
-          <li>New & Popular</li>
-          <li>My List</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/tvseries">TV Shows</Link>
+          </li>
+          <li>
+            <Link to="/movies">Movies</Link>
+          </li>
+          {/* <li>New & Popular</li>
+           */}
         </ul>
       </div>
     </div>

@@ -1,17 +1,29 @@
-import Row from "./components/Row";
-import requests from "./requests";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import * as ROUTES from "./Navigation/routes";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./Pages/Home";
+import TvSeries from "./Pages/TvSeries";
+import Movies from "./Pages/Movies";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Row title="New on Netflix" fetchUrl={requests.fetchTrending} />
-      <Row title="Coming This Week" fetchUrl={requests.fetchNetflixOriginal} />
-      <Row title="Coming Next Week" fetchUrl={requests.fetchTopRated} />
-      <Row title="Popular Movies" fetchUrl={requests.fetchLatest} />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Switch>
+          <Route exact path={ROUTES.HOME}>
+            <Home />
+          </Route>
+          <Route exact path={ROUTES.TV_SERIES}>
+            <TvSeries />
+          </Route>
+          <Route exact path={ROUTES.MOVIES}>
+            <Movies />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
