@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./Pages/Home";
 import TvSeries from "./Pages/TvSeries";
 import Movies from "./Pages/Movies";
+import Detail from "./Pages/Detail";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path={ROUTES.MOVIES}>
             <Movies />
+          </Route>
+          <Route exact path="/:id">
+            <Detail />
           </Route>
         </Switch>
       </div>
