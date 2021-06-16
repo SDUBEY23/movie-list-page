@@ -1,0 +1,60 @@
+.detail {
+  color: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.detail__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.detail__poster {
+  padding: 2rem;
+  padding-top: 5rem;
+  max-width: 80%;
+  width: 350px;
+  /* height: 30vh; */
+  display: block;
+  margin: auto;
+}
+
+.detail__content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.detail__content h1,
+.detail__content p {
+  margin: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  margin: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .detail__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+} */

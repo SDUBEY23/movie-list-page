@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import * as ROUTES from "./Navigation/routes";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Header/Navbar";
 import Home from "./Pages/Home";
 import TvSeries from "./Pages/TvSeries";
 import Movies from "./Pages/Movies";

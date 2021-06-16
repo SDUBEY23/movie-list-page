@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
+import "./Detail.css";
 
 function Detail() {
   const [movieDetails, setMovieDetails] = useState([]);
   const { id } = useParams();
   const location = useLocation();
-  console.log(location);
-  // const API_KEY = "f6d3eed06ab3124976c6ecc8926da3bc";
+  let genresList;
+  let genres = [];
+
   const base_url = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
@@ -22,13 +24,40 @@ function Detail() {
     fetchMovieDetail();
   }, [id, location]);
   console.log(movieDetails);
+  genres = movieDetails.genres;
+
+  if (genres) {
+    genresList = genres.map((g, i) => {
+      return (
+        <li className="flex" key={g.id}>
+          <button className="btn" type="button">
+            {g.name}
+          </button>
+        </li>
+      );
+    });
+  }
+
   return (
-    <div>
-      <h1>{movieDetails.original_title}</h1>
-      <img
-        src={`${base_url}${movieDetails.poster_path}`}
-        alt={movieDetails.original_title}
-      />
+    <div className="detail">
+      <div className="detail__container">
+        <img
+          className="detail__poster"
+          src={`${base_url}${movieDetails.poster_path}`}
+          alt={movieDetails?.original_name}
+        />
+      </div>
+      <div className="detail__content">
+        <h1>
+          {movieDetails?.original_name ||
+            movieDetails?.original_title ||
+            movieDetails?.title}
+        </h1>
+        <p>{movieDetails?.overview}</p>
+        <div className="detail__grid">
+          <p>GENRE: {genresList}</p>
+        </div>
+      </div>
     </div>
   );
 }
