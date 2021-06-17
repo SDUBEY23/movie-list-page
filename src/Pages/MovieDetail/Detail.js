@@ -19,11 +19,11 @@ function Detail() {
       );
 
       setMovieDetails(response.data);
+      console.log(location.state?.type);
       return response;
     };
     fetchMovieDetail();
   }, [id, location]);
-  console.log(movieDetails);
   genres = movieDetails.genres;
 
   if (genres) {

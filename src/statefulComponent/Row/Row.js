@@ -6,15 +6,15 @@ import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl, type }) {
-  const [movies, setMovies] = useState([]);
+function Row({ title, fetchUrl, type, isFirstRowLarge }) {
+  const [shows, setShows] = useState([]);
 
   const history = useHistory();
 
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
-      setMovies(request.data.results);
+      setShows(request.data.results);
       return request;
     }
     fetchData();
@@ -24,14 +24,16 @@ function Row({ title, fetchUrl, type }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row__posters">
-        {movies.map((movie) => {
+        {shows?.map((show) => {
           return (
             <img
-              key={movie.id}
-              onClick={() => history.push(`/${movie.id}`, { type })}
-              className="row__poster"
-              src={`${base_url}${movie.backdrop_path}`}
-              alt={movie.title}
+              key={show.id}
+              onClick={() => history.push(`/${show.id}`, { type })}
+              className={`row__poster ${isFirstRowLarge && "row__posterLarge"}`}
+              src={`${base_url}${
+                isFirstRowLarge ? show?.poster_path : show?.backdrop_path
+              }`}
+              alt={show?.title}
             />
           );
         })}

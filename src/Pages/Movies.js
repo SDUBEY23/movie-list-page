@@ -7,13 +7,9 @@ function Movies() {
     <>
       <Row
         type="movie"
-        title="New on Netflix"
-        fetchUrl={requests.fetchTrending}
-      />
-      <Row
-        type="movie"
-        title="Coming This Week"
+        title="Netflix Orignals"
         fetchUrl={requests.fetchNetflixOriginal}
+        isFirstRowLarge
       />
       <Row
         type="movie"

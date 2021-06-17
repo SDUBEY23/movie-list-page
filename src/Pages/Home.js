@@ -5,10 +5,32 @@ import requests from "../requests";
 function Home() {
   return (
     <>
-      <Row title="New on Netflix" fetchUrl={requests.fetchTrending} />
-      <Row title="Coming This Week" fetchUrl={requests.fetchNetflixOriginal} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Popular Movies" fetchUrl={requests.fetchLatest} />
+      <Row
+        type="movie"
+        title="Netflix Orignals"
+        fetchUrl={requests.fetchNetflixOriginal}
+        isFirstRowLarge
+      />
+      <Row
+        type="movie"
+        title="Popular Movies"
+        fetchUrl={requests.fetchLatest}
+      />
+      <Row
+        type="movie"
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        type="movie"
+        title="Romatic Movies"
+        fetchUrl={requests.fetchRomanceMovies}
+      />
+      <Row
+        type="movie"
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+      />
     </>
   );
 }

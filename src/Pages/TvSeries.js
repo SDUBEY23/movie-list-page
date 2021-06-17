@@ -5,11 +5,11 @@ import requests from "../requests";
 function TvSeries() {
   return (
     <>
-      <Row type="tv" title="New on Netflix" fetchUrl={requests.fetchTrending} />
       <Row
         type="tv"
-        title="Coming This Week"
-        fetchUrl={requests.fetchNetflixOriginal}
+        title="Netflix Orignals"
+        isFirstRowLarge
+        fetchUrl={requests.fetchNetflixOriginalSeries}
       />
       <Row
         type="tv"

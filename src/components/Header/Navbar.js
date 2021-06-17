@@ -30,7 +30,12 @@ function Navbar() {
         />
         <ul className="navbar__list">
           <li>
-            <NavLink exact className="navbar__activeitem" to={ROUTES.HOME}>
+            <NavLink
+              exact
+              className="navbar__activeitem"
+              to={ROUTES.HOME}
+              params={{ screenType: "movie" }}
+            >
               Home
             </NavLink>
           </li>

@@ -5,7 +5,7 @@ import Navbar from "./components/Header/Navbar";
 import Home from "./Pages/Home";
 import TvSeries from "./Pages/TvSeries";
 import Movies from "./Pages/Movies";
-import Detail from "./Pages/Detail";
+import Detail from "./Pages/MovieDetail/Detail";
 import Banner from "./statefulComponent/Banner/Banner";
 
 function App() {
