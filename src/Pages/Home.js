@@ -1,5 +1,5 @@
 import React from "react";
-import Row from "../statefulComponent/Row";
+import Row from "../statefulComponent/Row/Row";
 import requests from "../requests";
 
 function Home() {

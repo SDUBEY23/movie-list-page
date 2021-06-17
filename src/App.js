@@ -6,12 +6,15 @@ import Home from "./Pages/Home";
 import TvSeries from "./Pages/TvSeries";
 import Movies from "./Pages/Movies";
 import Detail from "./Pages/Detail";
+import Banner from "./statefulComponent/Banner/Banner";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Navbar />
+        <Banner />
+
         <Switch>
           <Route exact path={ROUTES.HOME}>
             <Home />
