@@ -11,18 +11,19 @@ import Banner from "./statefulComponent/Banner/Banner";
 function App() {
   return (
     <Router>
+      <Navbar />
       <div className="app">
-        <Navbar />
-        <Banner />
-
         <Switch>
           <Route exact path={ROUTES.HOME}>
+            <Banner />
             <Home />
           </Route>
           <Route exact path={ROUTES.TV_SERIES}>
+            <Banner />
             <TvSeries />
           </Route>
           <Route exact path={ROUTES.MOVIES}>
+            <Banner />
             <Movies />
           </Route>
           <Route exact path="/:id">

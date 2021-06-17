@@ -5,6 +5,7 @@
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   /* background-color: #111; */
   height: 30px;
   z-index: 1;
@@ -37,4 +38,8 @@
 
 .navbar__list li {
   margin-left: 1rem;
+}
+
+.navbar__icons {
+  margin-right: 2rem;
 }

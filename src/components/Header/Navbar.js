@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import * as ROUTES from "../../Navigation/routes";
 import "./Navbar.css";
+import NotificationsActiveOutlinedIcon from "@material-ui/icons/NotificationsActiveOutlined";
+import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
+import CardGiftcardOutlinedIcon from "@material-ui/icons/CardGiftcardOutlined";
+import { Avatar, Badge, IconButton } from "@material-ui/core";
 
 function Navbar() {
   const [show, handleShow] = useState(false);
@@ -26,21 +30,41 @@ function Navbar() {
         />
         <ul className="navbar__list">
           <li>
-            <Link to={ROUTES.HOME}>Home</Link>
+            <NavLink to={ROUTES.HOME}>Home</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.TV_SERIES} params={{ screenType: "tv" }}>
+            <NavLink to={ROUTES.TV_SERIES} params={{ screenType: "tv" }}>
               TV Shows
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to={ROUTES.MOVIES} params={{ screenType: "movie" }}>
+            <NavLink to={ROUTES.MOVIES} params={{ screenType: "movie" }}>
               Movies
-            </Link>
+            </NavLink>
           </li>
-          {/* <li>New & Popular</li>
-           */}
         </ul>
+      </div>
+      <div className="navbar__icons">
+        <IconButton>
+          <Badge>
+            <SearchOutlinedIcon color="primary" />
+          </Badge>
+        </IconButton>
+        <IconButton>
+          <Badge>
+            <NotificationsActiveOutlinedIcon color="primary" />
+          </Badge>
+        </IconButton>
+        <IconButton>
+          <Badge>
+            <CardGiftcardOutlinedIcon color="primary" />
+          </Badge>
+        </IconButton>
+        <IconButton>
+          <Avatar alt="Remy Sharp" size="small" src="/broken-image.jpg">
+            S
+          </Avatar>
+        </IconButton>
       </div>
     </div>
   );
