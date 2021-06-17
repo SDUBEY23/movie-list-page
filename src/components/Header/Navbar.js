@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import * as ROUTES from "../../Navigation/routes";
 import "./Navbar.css";
 import NotificationsActiveOutlinedIcon from "@material-ui/icons/NotificationsActiveOutlined";
@@ -30,15 +30,27 @@ function Navbar() {
         />
         <ul className="navbar__list">
           <li>
-            <NavLink to={ROUTES.HOME}>Home</NavLink>
+            <NavLink exact className="navbar__activeitem" to={ROUTES.HOME}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.TV_SERIES} params={{ screenType: "tv" }}>
+            <NavLink
+              exact
+              className="navbar__activeitem"
+              to={ROUTES.TV_SERIES}
+              params={{ screenType: "tv" }}
+            >
               TV Shows
             </NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.MOVIES} params={{ screenType: "movie" }}>
+            <NavLink
+              exact
+              className="navbar__activeitem"
+              to={ROUTES.MOVIES}
+              params={{ screenType: "movie" }}
+            >
               Movies
             </NavLink>
           </li>
@@ -47,17 +59,17 @@ function Navbar() {
       <div className="navbar__icons">
         <IconButton>
           <Badge>
-            <SearchOutlinedIcon color="primary" />
+            <SearchOutlinedIcon style={{ color: "white" }} />
           </Badge>
         </IconButton>
         <IconButton>
           <Badge>
-            <NotificationsActiveOutlinedIcon color="primary" />
+            <NotificationsActiveOutlinedIcon style={{ color: "white" }} />
           </Badge>
         </IconButton>
         <IconButton>
           <Badge>
-            <CardGiftcardOutlinedIcon color="primary" />
+            <CardGiftcardOutlinedIcon style={{ color: "white" }} />
           </Badge>
         </IconButton>
         <IconButton>
