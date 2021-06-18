@@ -19,7 +19,6 @@ function Detail() {
       );
 
       setMovieDetails(response.data);
-      console.log(location.state?.type);
       return response;
     };
     fetchMovieDetail();

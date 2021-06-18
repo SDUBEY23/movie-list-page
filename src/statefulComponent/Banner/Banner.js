@@ -19,10 +19,11 @@ function Banner() {
     }
     fetchData();
   }, [location]);
-  console.log(movie);
 
-  function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  function truncate(string, numberOfCharacters) {
+    return string?.length > numberOfCharacters
+      ? string.substr(0, numberOfCharacters - 1) + "..."
+      : string;
   }
   return (
     <header

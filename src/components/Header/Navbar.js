@@ -8,20 +8,15 @@ import CardGiftcardOutlinedIcon from "@material-ui/icons/CardGiftcardOutlined";
 import { Avatar, Badge, IconButton } from "@material-ui/core";
 
 function Navbar() {
-  const [show, handleShow] = useState(false);
+  const [showNavbar, handleShowNavbar] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        handleShow(true);
-      } else handleShow(false);
+      window.scrollY > 50 ? handleShowNavbar(true) : handleShowNavbar(false);
     });
-    return () => {
-      window.removeEventListener("scroll");
-    };
   }, []);
   return (
-    <div className={`navbar ${show && "nav__black"}`}>
+    <div className={`navbar ${showNavbar && "nav__black"}`}>
       <div>
         <img
           className="navbar__logo"
