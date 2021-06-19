@@ -25,32 +25,17 @@ function Navbar() {
         />
         <ul className="navbar__list">
           <li>
-            <NavLink
-              exact
-              className="navbar__activeitem"
-              to={ROUTES.HOME}
-              params={{ screenType: "movie" }}
-            >
+            <NavLink exact className="navbar__activeitem" to={ROUTES.HOME}>
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink
-              exact
-              className="navbar__activeitem"
-              to={ROUTES.TV_SERIES}
-              params={{ screenType: "tv" }}
-            >
+            <NavLink exact className="navbar__activeitem" to={ROUTES.TV_SERIES}>
               TV Shows
             </NavLink>
           </li>
           <li>
-            <NavLink
-              exact
-              className="navbar__activeitem"
-              to={ROUTES.MOVIES}
-              params={{ screenType: "movie" }}
-            >
+            <NavLink exact className="navbar__activeitem" to={ROUTES.MOVIES}>
               Movies
             </NavLink>
           </li>

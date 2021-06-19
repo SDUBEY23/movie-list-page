@@ -14,8 +14,9 @@ function Detail() {
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
+      console.log(process.env);
       const response = await axios.get(
-        `https://api.themoviedb.org/3/${location.state?.type}/${id}?api_key=f6d3eed06ab3124976c6ecc8926da3bc&language=en-US`
+        `https://api.themoviedb.org/3/${location.state?.type}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       );
 
       setMovieDetails(response.data);
